@@ -1,7 +1,3 @@
-Here’s a polished and GitHub-ready **README.md page** for your **ShadowHound** project — clean, professional, and geared toward ethical hackers, red teamers, and recruiters who may stumble on your repo:
-
----
-
 ````markdown
 # 🐺 ShadowHound v0.3
 
@@ -115,5 +111,4 @@ Built by **Faheem Musthafa C.P** — for the cyber warriors, the red teamers, th
 
 > Feel free to fork, contribute, and improve. Pull requests welcome!
 
-```
 
