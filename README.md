@@ -1,5 +1,5 @@
 ````markdown
-# 🐺 ShadowHound v0.3
+# 🐺 ShadowHound v1
 
 > **Advanced Black-Box Reconnaissance Toolkit for Ethical Hackers & Red Teamers**
 
