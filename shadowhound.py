@@ -130,7 +130,6 @@ def webscan(target):
         print(f"[-] Web tech detection failed: {str(e)}")
 
 def netrecon(target):
-   def netrecon(target):
     """Network reconnaissance including host discovery and service enumeration"""
     print(f"[+] Starting Network Recon on {target}")
     
